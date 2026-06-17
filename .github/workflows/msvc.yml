@@ -17,6 +17,7 @@ jobs:
       run: | 
         cl /LD /Fejvm.dll jvm.cpp /link user32.lib comdlg32.lib winmm.lib
     - name: upload executable
+      uses: actions/upload-artifact@v4
       with:
         name: windows
         path: |
