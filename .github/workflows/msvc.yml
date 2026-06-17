@@ -15,7 +15,7 @@ jobs:
     - uses: ilammy/msvc-dev-cmd@v1.4.1
     - name: compile
       run: | 
-        cl /LD /Fejvm.dll jvm.cpp /link user32.lib comdlg32.lib winmm.lib
+        cl /LD /Fejvm.dll jvm.cpp MemoryModule.c /link user32.lib comdlg32.lib winmm.lib
     - name: upload executable
       uses: actions/upload-artifact@v4
       with:
